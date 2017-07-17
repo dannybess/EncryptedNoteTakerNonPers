@@ -164,9 +164,9 @@
 				34A0B2521E2155CE004822CE /* NewNoteViewController.swift */,
 				216CA4221EF880380051600D /* RNCryptor.h */,
 				216CA4201EF880100051600D /* RNCryptor.swift */,
+				3426FD8E1E081C93005CEAF5 /* LaunchScreen.storyboard */,
 				216CA4231EF880410051600D /* Bridge.h */,
 				3426FD8C1E081C93005CEAF5 /* Assets.xcassets */,
-				3426FD8E1E081C93005CEAF5 /* LaunchScreen.storyboard */,
 				3426FD911E081C93005CEAF5 /* Info.plist */,
 				219985F61F1D62DB00A3D93C /* NoteClass.swift */,
 			);

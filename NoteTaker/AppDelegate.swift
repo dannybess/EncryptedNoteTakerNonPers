@@ -21,7 +21,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if(detectJailbreak()) {
+            let alert = UIAlertController(title: "Error", message: "Your device is jailbroken!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                fatalError()
+            }))
+            DispatchQueue.main.async {
+                self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            }
+        }
         return true
+    }
+    
+    func detectJailbreak() -> Bool {
+        var error : Error?
+        let stringToBeWritten: String = "Is the device jailbroken?"
+        try? stringToBeWritten.write(toFile: "/private/jailbreak.txt", atomically: true, encoding: String.Encoding.utf8)
+        if error == nil {
+            return true
+        }
+        else {
+            try? FileManager.default.removeItem(atPath: "/private/jailbreak.txt")
+        }
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -48,6 +70,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //self.saveContext()
     }
 
-    // MARK: - Core Data stack
 }
 

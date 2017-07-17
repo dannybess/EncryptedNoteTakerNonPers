@@ -13,7 +13,6 @@ provides-dynamic-lookup:
 - "licenseKeyTextField"
 - "nameTextField"
 - "preferredStatusBarStyle"
-- "secret"
 - "sha256"
 - "validHashGen"
 - "viewDidLoad"
@@ -25,7 +24,6 @@ depends-top-level:
 - !private "=="
 - !private "??"
 - "AssignmentPrecedence"
-- !private "BooleanLiteralType"
 - !private "CC_LONG"
 - !private "CC_SHA256"
 - !private "CC_SHA256_DIGEST_LENGTH"
@@ -35,7 +33,7 @@ depends-top-level:
 - !private "NSString"
 - "RegisterViewController"
 - "String"
-- "StringLiteralType"
+- !private "StringLiteralType"
 - !private "UIAlertAction"
 - !private "UIAlertActionStyle"
 - !private "UIAlertController"
@@ -46,7 +44,9 @@ depends-top-level:
 - !private "UInt32"
 - "UInt8"
 - !private "arc4random_uniform"
+- !private "emojiEnabled"
 - !private "print"
+- !private "secret"
 depends-member:
 - !private ["Ps9AnyObject", "CC_LONG"]
 - !private ["Ps9AnyObject", "CC_SHA256"]
@@ -65,7 +65,8 @@ depends-member:
 - !private ["Ps9AnyObject", "arc4random_uniform"]
 - !private ["Ps9AnyObject", "character"]
 - !private ["Ps9AnyObject", "data"]
-- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "emojiEnabled"]
+- !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "length"]
 - !private ["Ps9AnyObject", "licenseKeyTextField"]
 - !private ["Ps9AnyObject", "nameTextField"]
@@ -106,7 +107,8 @@ depends-member:
 - !private ["Ps7CVarArg", "character"]
 - !private ["Ps7CVarArg", "count"]
 - !private ["Ps7CVarArg", "data"]
-- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "emojiEnabled"]
+- !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "joined"]
 - !private ["Ps7CVarArg", "length"]
 - !private ["Ps7CVarArg", "licenseKeyTextField"]
@@ -127,7 +129,7 @@ depends-member:
 - !private ["Ps10Collection", "withUnsafeMutableBytes"]
 - !private ["Ps10Comparable", "Encoding"]
 - !private ["Ps10Comparable", "data"]
-- ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "CC_LONG"]
 - !private ["Ps28CustomDebugStringConvertible", "CC_SHA256"]
 - !private ["Ps28CustomDebugStringConvertible", "CC_SHA256_DIGEST_LENGTH"]
@@ -146,7 +148,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "character"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "data"]
-- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "emojiEnabled"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "joined"]
 - !private ["Ps28CustomDebugStringConvertible", "length"]
 - !private ["Ps28CustomDebugStringConvertible", "licenseKeyTextField"]
@@ -166,13 +169,13 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "character"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "data"]
-- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "length"]
 - !private ["Ps17CustomReflectable", "Encoding"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "count"]
 - !private ["Ps17CustomReflectable", "data"]
-- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "joined"]
 - !private ["Ps17CustomReflectable", "map"]
 - !private ["Ps17CustomReflectable", "withUnsafeBytes"]
@@ -196,7 +199,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "character"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "data"]
-- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "emojiEnabled"]
+- !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "joined"]
 - !private ["Ps23CustomStringConvertible", "length"]
 - !private ["Ps23CustomStringConvertible", "licenseKeyTextField"]
@@ -240,7 +244,8 @@ depends-member:
 - !private ["Ps9Equatable", "count"]
 - !private ["Ps9Equatable", "data"]
 - !private ["Ps9Equatable", "default"]
-- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "emojiEnabled"]
+- !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "length"]
 - !private ["Ps9Equatable", "licenseKeyTextField"]
 - !private ["Ps9Equatable", "lightContent"]
@@ -263,18 +268,18 @@ depends-member:
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "Encoding"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "character"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "data"]
-- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "length"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "Encoding"]
 - !private ["Ps26ExpressibleByStringLiteral", "character"]
 - !private ["Ps26ExpressibleByStringLiteral", "data"]
-- ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "length"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "Encoding"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "character"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "data"]
-- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "length"]
 - !private ["Ps8Hashable", "CC_LONG"]
 - !private ["Ps8Hashable", "CC_SHA256"]
@@ -297,7 +302,8 @@ depends-member:
 - !private ["Ps8Hashable", "count"]
 - !private ["Ps8Hashable", "data"]
 - !private ["Ps8Hashable", "default"]
-- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "emojiEnabled"]
+- !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "length"]
 - !private ["Ps8Hashable", "licenseKeyTextField"]
 - !private ["Ps8Hashable", "lightContent"]
@@ -320,10 +326,10 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "Encoding"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "data"]
-- ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "Encoding"]
 - !private ["Ps10MirrorPath", "data"]
-- ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "init"]
 - !private ["Ps17MutableCollection", "count"]
 - !private ["Ps17MutableCollection", "init"]
 - !private ["Ps17MutableCollection", "joined"]
@@ -347,7 +353,8 @@ depends-member:
 - !private ["PSo8NSCoding", "arc4random_uniform"]
 - !private ["PSo8NSCoding", "character"]
 - !private ["PSo8NSCoding", "data"]
-- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "emojiEnabled"]
+- !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "length"]
 - !private ["PSo8NSCoding", "licenseKeyTextField"]
 - !private ["PSo8NSCoding", "nameTextField"]
@@ -362,7 +369,7 @@ depends-member:
 - !private ["PSo9NSCopying", "Encoding"]
 - !private ["PSo9NSCopying", "character"]
 - !private ["PSo9NSCopying", "data"]
-- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "length"]
 - !private ["PSo26NSExtensionRequestHandling", "CC_LONG"]
 - !private ["PSo26NSExtensionRequestHandling", "CC_SHA256"]
@@ -378,6 +385,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UInt32"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
 - !private ["PSo26NSExtensionRequestHandling", "arc4random_uniform"]
+- !private ["PSo26NSExtensionRequestHandling", "emojiEnabled"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "licenseKeyTextField"]
 - !private ["PSo26NSExtensionRequestHandling", "nameTextField"]
@@ -391,7 +399,7 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "Encoding"]
 - !private ["PSo16NSMutableCopying", "character"]
 - !private ["PSo16NSMutableCopying", "data"]
-- ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "length"]
 - !private ["CSo8NSObject", "CC_LONG"]
 - !private ["CSo8NSObject", "CC_SHA256"]
@@ -416,6 +424,7 @@ depends-member:
 - !private ["CSo8NSObject", "data"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "doneClicked"]
+- !private ["CSo8NSObject", "emojiEnabled"]
 - ["CSo8NSObject", "generateRandomKey"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "length"]
@@ -425,7 +434,7 @@ depends-member:
 - ["CSo8NSObject", "preferredStatusBarStyle"]
 - !private ["CSo8NSObject", "present"]
 - !private ["CSo8NSObject", "print"]
-- ["CSo8NSObject", "secret"]
+- !private ["CSo8NSObject", "secret"]
 - ["CSo8NSObject", "sha256"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "validHashGen"]
@@ -447,7 +456,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "arc4random_uniform"]
 - !private ["PSo16NSObjectProtocol", "character"]
 - !private ["PSo16NSObjectProtocol", "data"]
-- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "emojiEnabled"]
+- !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "length"]
 - !private ["PSo16NSObjectProtocol", "licenseKeyTextField"]
 - !private ["PSo16NSObjectProtocol", "nameTextField"]
@@ -462,12 +472,12 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "Encoding"]
 - !private ["PSo14NSSecureCoding", "character"]
 - !private ["PSo14NSSecureCoding", "data"]
-- ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "length"]
 - !private ["CSo8NSString", "Encoding"]
 - !private ["CSo8NSString", "character"]
 - !private ["CSo8NSString", "data"]
-- ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "init"]
 - !private ["CSo8NSString", "length"]
 - !private ["Ps22RandomAccessCollection", "count"]
 - !private ["Ps22RandomAccessCollection", "init"]
@@ -510,6 +520,7 @@ depends-member:
 - ["C9NoteTaker22RegisterViewController", "deinit"]
 - ["C9NoteTaker22RegisterViewController", "didReceiveMemoryWarning"]
 - ["C9NoteTaker22RegisterViewController", "doneClicked"]
+- !private ["C9NoteTaker22RegisterViewController", "emojiEnabled"]
 - ["C9NoteTaker22RegisterViewController", "generateRandomKey"]
 - ["C9NoteTaker22RegisterViewController", "init"]
 - ["C9NoteTaker22RegisterViewController", "licenseKeyTextField"]
@@ -518,7 +529,7 @@ depends-member:
 - ["C9NoteTaker22RegisterViewController", "preferredStatusBarStyle"]
 - !private ["C9NoteTaker22RegisterViewController", "present"]
 - !private ["C9NoteTaker22RegisterViewController", "print"]
-- ["C9NoteTaker22RegisterViewController", "secret"]
+- !private ["C9NoteTaker22RegisterViewController", "secret"]
 - ["C9NoteTaker22RegisterViewController", "sha256"]
 - ["C9NoteTaker22RegisterViewController", "validHashGen"]
 - ["C9NoteTaker22RegisterViewController", "viewDidLoad"]
@@ -534,13 +545,13 @@ depends-member:
 - !private ["Ps10Strideable", "init"]
 - !private ["SS", "Encoding"]
 - !private ["SS", "data"]
-- ["SS", "init"]
+- !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "Encoding"]
 - !private ["Ps16TextOutputStream", "data"]
-- ["Ps16TextOutputStream", "init"]
+- !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "Encoding"]
 - !private ["Ps20TextOutputStreamable", "data"]
-- ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["CSo13UIAlertAction", "init"]
 - !private ["OSC18UIAlertActionStyle", "default"]
@@ -562,6 +573,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UInt32"]
 - !private ["PSo21UIAppearanceContainer", "addAction"]
 - !private ["PSo21UIAppearanceContainer", "arc4random_uniform"]
+- !private ["PSo21UIAppearanceContainer", "emojiEnabled"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "licenseKeyTextField"]
 - !private ["PSo21UIAppearanceContainer", "nameTextField"]
@@ -587,6 +599,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UInt32"]
 - !private ["PSo18UIContentContainer", "addAction"]
 - !private ["PSo18UIContentContainer", "arc4random_uniform"]
+- !private ["PSo18UIContentContainer", "emojiEnabled"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "licenseKeyTextField"]
 - !private ["PSo18UIContentContainer", "nameTextField"]
@@ -615,6 +628,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UInt32"]
 - !private ["PSo18UIFocusEnvironment", "addAction"]
 - !private ["PSo18UIFocusEnvironment", "arc4random_uniform"]
+- !private ["PSo18UIFocusEnvironment", "emojiEnabled"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "licenseKeyTextField"]
 - !private ["PSo18UIFocusEnvironment", "nameTextField"]
@@ -648,6 +662,7 @@ depends-member:
 - ["CSo11UIResponder", "bytes2String"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "doneClicked"]
+- !private ["CSo11UIResponder", "emojiEnabled"]
 - ["CSo11UIResponder", "generateRandomKey"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "licenseKeyTextField"]
@@ -656,7 +671,7 @@ depends-member:
 - ["CSo11UIResponder", "preferredStatusBarStyle"]
 - !private ["CSo11UIResponder", "present"]
 - !private ["CSo11UIResponder", "print"]
-- ["CSo11UIResponder", "secret"]
+- !private ["CSo11UIResponder", "secret"]
 - ["CSo11UIResponder", "sha256"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "validHashGen"]
@@ -675,6 +690,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "UInt32"]
 - !private ["PSo30UIResponderStandardEditActions", "addAction"]
 - !private ["PSo30UIResponderStandardEditActions", "arc4random_uniform"]
+- !private ["PSo30UIResponderStandardEditActions", "emojiEnabled"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - !private ["PSo30UIResponderStandardEditActions", "licenseKeyTextField"]
 - !private ["PSo30UIResponderStandardEditActions", "nameTextField"]
@@ -700,6 +716,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UInt32"]
 - !private ["PSo16UIStateRestoring", "addAction"]
 - !private ["PSo16UIStateRestoring", "arc4random_uniform"]
+- !private ["PSo16UIStateRestoring", "emojiEnabled"]
 - !private ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "licenseKeyTextField"]
 - !private ["PSo16UIStateRestoring", "nameTextField"]
@@ -728,6 +745,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UInt32"]
 - !private ["PSo18UITraitEnvironment", "addAction"]
 - !private ["PSo18UITraitEnvironment", "arc4random_uniform"]
+- !private ["PSo18UITraitEnvironment", "emojiEnabled"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "licenseKeyTextField"]
 - !private ["PSo18UITraitEnvironment", "nameTextField"]
@@ -760,6 +778,7 @@ depends-member:
 - ["CSo16UIViewController", "bytes2String"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "doneClicked"]
+- !private ["CSo16UIViewController", "emojiEnabled"]
 - ["CSo16UIViewController", "generateRandomKey"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "licenseKeyTextField"]
@@ -768,7 +787,7 @@ depends-member:
 - ["CSo16UIViewController", "preferredStatusBarStyle"]
 - !private ["CSo16UIViewController", "present"]
 - !private ["CSo16UIViewController", "print"]
-- ["CSo16UIViewController", "secret"]
+- !private ["CSo16UIViewController", "secret"]
 - ["CSo16UIViewController", "sha256"]
 - ["CSo16UIViewController", "validHashGen"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -790,24 +809,24 @@ depends-member:
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "Encoding"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "data"]
-- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "Encoding"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "data"]
-- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "Encoding"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "data"]
-- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "Encoding"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "data"]
-- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps33_ExpressibleByStringInterpolation", "Encoding"]
 - !private ["Ps33_ExpressibleByStringInterpolation", "data"]
-- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "Encoding"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "character"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "data"]
-- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "length"]
 - !private ["Ps9_Hashable", "CC_LONG"]
 - !private ["Ps9_Hashable", "CC_SHA256"]
@@ -830,7 +849,8 @@ depends-member:
 - !private ["Ps9_Hashable", "count"]
 - !private ["Ps9_Hashable", "data"]
 - !private ["Ps9_Hashable", "default"]
-- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "emojiEnabled"]
+- !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "length"]
 - !private ["Ps9_Hashable", "licenseKeyTextField"]
 - !private ["Ps9_Hashable", "lightContent"]
@@ -872,7 +892,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "data"]
-- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "joined"]
 - !private ["Ps21_ObjectiveCBridgeable", "map"]
 - !private ["Ps21_ObjectiveCBridgeable", "withUnsafeBytes"]
@@ -900,35 +920,35 @@ depends-nominal:
 - !private "PSo15CALayerDelegate"
 - "Ps7CVarArg"
 - !private "Ps10Collection"
-- "Ps10Comparable"
+- !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
-- "Ps29CustomPlaygroundQuickLookable"
-- "Ps17CustomReflectable"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - !private "V10Foundation4Data"
 - !private "VE10FoundationSS8Encoding"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
-- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
-- "Ps26ExpressibleByStringLiteral"
-- "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Ps8Hashable"
 - !private "Si"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
-- "Ps25LosslessStringConvertible"
-- "Ps10MirrorPath"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
 - "PSo8NSCoding"
-- "PSo9NSCopying"
+- !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- "PSo16NSMutableCopying"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "PSo14NSSecureCoding"
-- "CSo8NSString"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps16RawRepresentable"
@@ -939,9 +959,9 @@ depends-nominal:
 - !private "Ps12SignedNumber"
 - !private "Vs12StaticString"
 - !private "Ps10Strideable"
-- "SS"
-- "Ps16TextOutputStream"
-- "Ps20TextOutputStreamable"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "CSo13UIAlertAction"
 - !private "OSC18UIAlertActionStyle"
@@ -975,13 +995,13 @@ depends-nominal:
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps28_DisallowMixedSignArithmetic"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
-- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
-- "Ps34_ExpressibleByBuiltinStringLiteral"
-- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- "Ps33_ExpressibleByStringInterpolation"
-- "Ps35_HasCustomAnyHashableRepresentation"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
 - !private "Ps14_Incrementable"
 - !private "Ps10_Indexable"
@@ -989,7 +1009,7 @@ depends-nominal:
 - !private "Ps8_Integer"
 - !private "Ps18_IntegerArithmetic"
 - !private "Ps17_MutableIndexable"
-- "Ps21_ObjectiveCBridgeable"
+- !private "Ps21_ObjectiveCBridgeable"
 - !private "Ps22_RandomAccessIndexable"
 - !private "Ps26_RangeReplaceableIndexable"
 - !private "Ps14_SignedInteger"
@@ -1021,4 +1041,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/dbessonov/Downloads/iOS-NoteTaker-master/NoteTaker/Bridge.h"
 - "/Users/dbessonov/Downloads/iOS-NoteTaker-master/NoteTaker/RNCryptor.h"
-interface-hash: "7625e252bc5cf982c35b841a99a246bd"
+interface-hash: "c334a1a4a9e040868ac524731f2540af"

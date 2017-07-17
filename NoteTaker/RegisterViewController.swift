@@ -15,8 +15,6 @@ class RegisterViewController : UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var licenseKeyTextField: UITextField!
     
-    let secret = "18asf902"
-    
     override func viewDidLoad() {
         
     }
@@ -25,7 +23,6 @@ class RegisterViewController : UIViewController {
     func sha256(string: String) -> Data? {
         guard let messageData = string.data(using:String.Encoding.utf8) else { return nil; }
         var digestData = Data(count: Int(CC_SHA256_DIGEST_LENGTH))
-        
         _ = digestData.withUnsafeMutableBytes {digestBytes in
             messageData.withUnsafeBytes {messageBytes in
                 CC_SHA256(messageBytes, CC_LONG(messageData.count), digestBytes)
@@ -65,6 +62,7 @@ class RegisterViewController : UIViewController {
         if(self.nameTextField.text != "") {
             let hash = validHashGen(val: self.nameTextField.text!)
             let hashString = hash.map { String(format: "%02x", $0) }.joined()
+            print(hashString)
             if(hashString == licenseKeyTextField!.text!) {
                 emojiEnabled = true
                 let alert = UIAlertController(title: "Success", message: "You are now verified", preferredStyle: UIAlertControllerStyle.alert)

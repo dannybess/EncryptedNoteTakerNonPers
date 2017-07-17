@@ -2,7 +2,7 @@
 //  License+CoreDataClass.swift
 //  
 //
-//  Created by Daniel Bessonov on 6/28/17.
+//  Created by Daniel Bessonov on 7/17/17.
 //
 //  This file was automatically generated and should not be edited.
 //

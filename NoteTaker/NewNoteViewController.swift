@@ -64,9 +64,7 @@ class NewNoteViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var peakLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
     @IBOutlet weak var peakImageView: UIImageView!
-    
     @IBOutlet weak var averageImageView: UIImageView!
     
     
@@ -93,12 +91,9 @@ class NewNoteViewController: UIViewController {
         if(noteTitle.text!.containsEmoji) {
             if(emojiEnabled) {
                 if (noteTitle.text != "") {
-                    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                    let note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: context) as! Note
                     let data : NSData = noteTitle.text!.data(using: String.Encoding.nonLossyASCII) as! NSData
-                    let password = "Secret password"
-                    let cipherText = RNCryptor.encrypt(data: data as Data, withPassword: password)
-                    note.name = cipherText as Data
+                    let cipherText = RNCryptor.encrypt(data: data as Data, withPassword: secret)
+                    noteArray.append(NoteClass(data: cipherText as Data))
                 }
             }
             else {
@@ -109,12 +104,10 @@ class NewNoteViewController: UIViewController {
         }
         else {
             if (noteTitle.text != "") {
-                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                let note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: context) as! Note
                 let data : NSData = noteTitle.text!.data(using: String.Encoding.nonLossyASCII) as! NSData
                 let password = "Secret password"
                 let cipherText = RNCryptor.encrypt(data: data as Data, withPassword: password)
-                note.name = cipherText as Data
+                noteArray.append(NoteClass(data: cipherText as Data))
             }
         }
         self.dismiss(animated: true, completion: nil)

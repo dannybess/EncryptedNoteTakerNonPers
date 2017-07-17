@@ -133,15 +133,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
-@import CoreData;
 @import Foundation;
+@import CoreData;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class UIWindow;
 @class UIApplication;
-@class NSPersistentContainer;
 
 SWIFT_CLASS("_TtC9NoteTaker11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -152,26 +151,7 @@ SWIFT_CLASS("_TtC9NoteTaker11AppDelegate")
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
-@property (nonatomic, strong) NSPersistentContainer * _Nonnull persistentContainer;
-- (void)saveContext;
-@property (nonatomic, strong) NSPersistentContainer * _Nonnull persistentContainerLicense;
-- (void)saveContextLicense;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSEntityDescription;
-@class NSManagedObjectContext;
-
-SWIFT_CLASS_NAMED("License")
-@interface License : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSData;
-
-@interface License (SWIFT_EXTENSION(NoteTaker))
-@property (nonatomic, strong) NSData * _Nullable key;
-@property (nonatomic, copy) NSString * _Nullable name;
 @end
 
 @class UITextField;
@@ -204,6 +184,8 @@ SWIFT_CLASS("_TtC9NoteTaker21NewNoteViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEntityDescription;
+@class NSManagedObjectContext;
 
 SWIFT_CLASS("_TtC9NoteTaker4Note")
 @interface Note : NSManagedObject
@@ -217,13 +199,9 @@ SWIFT_CLASS("_TtC9NoteTaker4Note")
 
 SWIFT_CLASS("_TtC9NoteTaker23NoteTakerViewController")
 @interface NoteTakerViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, copy) NSArray<Note *> * _Nonnull notesArray;
-@property (nonatomic, copy) NSArray<License *> * _Nonnull licenseKeys;
-@property (nonatomic, strong) AVAudioPlayer * _Nonnull audioPlayer;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidLoad;
 - (NSData * _Nullable)sha256WithString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)linearSearchWithArray:(NSArray<License *> * _Nonnull)array value:(NSData * _Nonnull)value SWIFT_WARN_UNUSED_RESULT;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -239,7 +217,6 @@ SWIFT_CLASS("_TtC9NoteTaker22RegisterViewController")
 @interface RegisterViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified licenseKeyTextField;
-@property (nonatomic, readonly, copy) NSString * _Nonnull secret;
 - (void)viewDidLoad;
 - (NSData * _Nullable)sha256WithString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)generateRandomKeyWithLength:(NSInteger)length SWIFT_WARN_UNUSED_RESULT;

@@ -7,15 +7,9 @@
 //
 
 import UIKit
-import AVFoundation
 import CoreData
 
 class NoteTakerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    var notesArray: [Note] = []
-    var licenseKeys : [License] = []
-    
-    var audioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,22 +34,10 @@ class NoteTakerViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         return digestData
     }
-    
-    //82756
-    func linearSearch(array : [License], value : NSData) -> Bool {
-        for key in array {
-            if(key.key!.isEqual(value)) {
-                return true
-            }
-        }
-        return false
-    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let request = NSFetchRequest<Note>(entityName: "Note")
-        self.notesArray = try! context.fetch(request)
         self.tableView.allowsSelection = false
         self.tableView.reloadData()
     }
@@ -66,14 +48,14 @@ class NoteTakerViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notesArray.count
+        return noteArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sound = notesArray[indexPath.row]
+        let text = noteArray[indexPath.row]
         let cell = UITableViewCell()
         do {
-            let originalData = try RNCryptor.decrypt(data: sound.name, withPassword: "Secret password")
+            let originalData = try RNCryptor.decrypt(data: text.name, withPassword: secret)
             var convertedString = (String(data: originalData, encoding: String.Encoding.utf8))!.mutableCopy() as! NSMutableString
             CFStringTransform(convertedString, nil, "Any-Hex/Java" as NSString, true)
             if(String(convertedString) == String(data: originalData, encoding: String.Encoding.utf8)) {
@@ -96,17 +78,9 @@ class NoteTakerViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
         switch editingStyle {
         case .delete:
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            context.delete(notesArray[indexPath.row] as NSManagedObject)
-            notesArray.remove(at: indexPath.row)
-            do {
-                try context.save()
-            } catch let error as NSError {
-                
-            }
+            noteArray.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         default:
             return

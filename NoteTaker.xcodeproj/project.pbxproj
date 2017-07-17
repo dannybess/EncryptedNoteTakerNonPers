@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		213E0D7A1F044461004DC4EE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E0D791F044461004DC4EE /* RegisterViewController.swift */; };
-		213E0D7D1F04453A004DC4EE /* License.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 213E0D7B1F04453A004DC4EE /* License.xcdatamodeld */; };
 		216CA4211EF880100051600D /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216CA4201EF880100051600D /* RNCryptor.swift */; };
+		219985F71F1D62DB00A3D93C /* NoteClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219985F61F1D62DB00A3D93C /* NoteClass.swift */; };
 		3426FD831E081C93005CEAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3426FD821E081C93005CEAF5 /* AppDelegate.swift */; };
 		3426FD851E081C93005CEAF5 /* NoteTakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3426FD841E081C93005CEAF5 /* NoteTakerViewController.swift */; };
 		3426FD881E081C93005CEAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3426FD861E081C93005CEAF5 /* Main.storyboard */; };
-		3426FD8B1E081C93005CEAF5 /* NoteTaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3426FD891E081C93005CEAF5 /* NoteTaker.xcdatamodeld */; };
 		3426FD8D1E081C93005CEAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3426FD8C1E081C93005CEAF5 /* Assets.xcassets */; };
 		3426FD901E081C93005CEAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3426FD8E1E081C93005CEAF5 /* LaunchScreen.storyboard */; };
 		3426FD9B1E081C93005CEAF5 /* NoteTakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3426FD9A1E081C93005CEAF5 /* NoteTakerTests.swift */; };
@@ -64,15 +63,14 @@
 
 /* Begin PBXFileReference section */
 		213E0D791F044461004DC4EE /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		213E0D7C1F04453A004DC4EE /* License.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = License.xcdatamodel; sourceTree = "<group>"; };
 		216CA4201EF880100051600D /* RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptor.swift; sourceTree = "<group>"; };
 		216CA4221EF880380051600D /* RNCryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
 		216CA4231EF880410051600D /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		219985F61F1D62DB00A3D93C /* NoteClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteClass.swift; sourceTree = "<group>"; };
 		3426FD7F1E081C93005CEAF5 /* NoteTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3426FD821E081C93005CEAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3426FD841E081C93005CEAF5 /* NoteTakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTakerViewController.swift; sourceTree = "<group>"; };
 		3426FD871E081C93005CEAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3426FD8A1E081C93005CEAF5 /* NoteTaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteTaker.xcdatamodel; sourceTree = "<group>"; };
 		3426FD8C1E081C93005CEAF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3426FD8F1E081C93005CEAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3426FD911E081C93005CEAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			children = (
 				34978EB51E0881A5006D7659 /* Assets */,
 				3426FD821E081C93005CEAF5 /* AppDelegate.swift */,
-				213E0D7B1F04453A004DC4EE /* License.xcdatamodeld */,
 				3426FD841E081C93005CEAF5 /* NoteTakerViewController.swift */,
 				3426FD861E081C93005CEAF5 /* Main.storyboard */,
 				213E0D791F044461004DC4EE /* RegisterViewController.swift */,
@@ -171,7 +168,7 @@
 				3426FD8C1E081C93005CEAF5 /* Assets.xcassets */,
 				3426FD8E1E081C93005CEAF5 /* LaunchScreen.storyboard */,
 				3426FD911E081C93005CEAF5 /* Info.plist */,
-				3426FD891E081C93005CEAF5 /* NoteTaker.xcdatamodeld */,
+				219985F61F1D62DB00A3D93C /* NoteClass.swift */,
 			);
 			path = NoteTaker;
 			sourceTree = "<group>";
@@ -382,14 +379,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3426FD8B1E081C93005CEAF5 /* NoteTaker.xcdatamodeld in Sources */,
 				34A0B2531E2155CE004822CE /* NewNoteViewController.swift in Sources */,
 				34A0B2601E217523004822CE /* Note+CoreDataClass.swift in Sources */,
 				3426FD851E081C93005CEAF5 /* NoteTakerViewController.swift in Sources */,
 				213E0D7A1F044461004DC4EE /* RegisterViewController.swift in Sources */,
 				3426FD831E081C93005CEAF5 /* AppDelegate.swift in Sources */,
 				216CA4211EF880100051600D /* RNCryptor.swift in Sources */,
-				213E0D7D1F04453A004DC4EE /* License.xcdatamodeld in Sources */,
+				219985F71F1D62DB00A3D93C /* NoteClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U7GHKH5D2P;
 				INFOPLIST_FILE = NoteTaker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.elwexicano.NoteTaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,7 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U7GHKH5D2P;
 				INFOPLIST_FILE = NoteTaker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.elwexicano.NoteTaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -659,29 +655,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		213E0D7B1F04453A004DC4EE /* License.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				213E0D7C1F04453A004DC4EE /* License.xcdatamodel */,
-			);
-			currentVersion = 213E0D7C1F04453A004DC4EE /* License.xcdatamodel */;
-			path = License.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		3426FD891E081C93005CEAF5 /* NoteTaker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3426FD8A1E081C93005CEAF5 /* NoteTaker.xcdatamodel */,
-			);
-			currentVersion = 3426FD8A1E081C93005CEAF5 /* NoteTaker.xcdatamodel */;
-			path = NoteTaker.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3426FD771E081C93005CEAF5 /* Project object */;
 }

@@ -34,17 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func detectJailbreak() -> Bool {
-        var error : Error?
-        let stringToBeWritten: String = "Is the device jailbroken?"
-        try? stringToBeWritten.write(toFile: "/private/jailbreak.txt", atomically: true, encoding: String.Encoding.utf8)
-        if error == nil {
+        let filePath = "/Applications/Cydia.app"
+        #if (arch(i386) || arch(x86_64)) && os(iOS)
+            return false
+        #endif
+        if (FileManager.default.fileExists(atPath: filePath)) {
             return true
-        }
-        else {
-            try? FileManager.default.removeItem(atPath: "/private/jailbreak.txt")
         }
         return false
     }
+    
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

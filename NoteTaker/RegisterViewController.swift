@@ -62,8 +62,7 @@ class RegisterViewController : UIViewController {
         if(self.nameTextField.text != "") {
             let hash = validHashGen(val: self.nameTextField.text!)
             let hashString = hash.map { String(format: "%02x", $0) }.joined()
-            print(hashString)
-            if(hashString == licenseKeyTextField!.text!) {
+            if(hashString.trimmingCharacters(in: .whitespaces) == licenseKeyTextField!.text!.trimmingCharacters(in: .whitespaces)) {
                 emojiEnabled = true
                 let alert = UIAlertController(title: "Success", message: "You are now verified", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
@@ -79,6 +78,7 @@ class RegisterViewController : UIViewController {
             }
         }
     }
+  
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

@@ -105,8 +105,7 @@ class NewNoteViewController: UIViewController {
         else {
             if (noteTitle.text != "") {
                 let data : NSData = noteTitle.text!.data(using: String.Encoding.nonLossyASCII) as! NSData
-                let password = "Secret password"
-                let cipherText = RNCryptor.encrypt(data: data as Data, withPassword: password)
+                let cipherText = RNCryptor.encrypt(data: data as Data, withPassword: secret)
                 noteArray.append(NoteClass(data: cipherText as Data))
             }
         }
